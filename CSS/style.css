@@ -92,16 +92,6 @@ h1 {
   float: inline-start;
 }
 
-table {
-  border: #3e3636 solid 3px;
-  border-radius: 15px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  width: 20%;
-  height: 20%;
-}
-
 .books {
   height: 100%;
   width: 100%;
@@ -116,4 +106,60 @@ table {
 
 a{
     color: #000000;
+}
+
+.table-bordered{
+  border: #3e3636;
+}
+
+.active{
+  border: #3e3636 solid 3px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.carouselText{
+  color: #d72323;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-250px * 7))
+  }
+}
+
+.partners-logo-slider {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background-color: #f5eded;
+  padding: 16px 0px;
+
+  .slide-track {
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+  }
+
+  .sliderTitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+  }
+
+  .slide {
+      width: 250px;
+      filter: grayscale(100%);
+      margin: 20px;
+  }
+
+  .slide:hover {
+      filter: grayscale(0%);
+  }
 }
